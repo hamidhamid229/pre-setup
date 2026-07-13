@@ -1,0 +1,4 @@
+- name: use task common
+  hosts: pc1
+  roles:
+    - common
