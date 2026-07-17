@@ -1,0 +1,17 @@
+- name: cute user
+  shell: |
+     awk -F: '$3 >= 1000 {print $1}' /etc/passwd
+  register: users
+
+- name: delete users
+  user:
+    name: "{{ item }}"  
+    state: absent 
+    remove: true 
+  with_items: "{{ users.stdout_lines }}"
+  when: item not in myusers
+   
+       
+  
+  
+

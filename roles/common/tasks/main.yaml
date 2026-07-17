@@ -1,3 +1,5 @@
+- name: delete user
+  include_tasks: delete-user.yaml
 
 - name: dns config
   include_tasks: dns.yaml
@@ -36,3 +38,5 @@
 - name: Set permission directory
   include_tasks: permissio_directory.yaml
 
+- name: chage port ssh
+  include_tasks: ssh.yaml  

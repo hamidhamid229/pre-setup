@@ -60,5 +60,13 @@ apps:
   - name: tree
   - name: htop    
 
-
-
+myusers:
+  - root
+  - bin
+  - daemon
+  - sys
+  - www-data
+  - hamed
+  - ali
+  - ubuntu
+  - kir  

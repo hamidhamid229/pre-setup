@@ -1,0 +1,12 @@
+- name: Change SSH port to 443
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#?Port\s+22'
+    line: 'Port 2000'
+    state: present
+    backup: true
+
+- name: restart ssh
+  systemd:
+    name: ssh
+    state: reloaded 
