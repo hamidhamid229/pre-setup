@@ -1,0 +1,13 @@
+- name: delete /etc/resolv.conf
+  file:
+    path: /etc/resolv.conf
+    state: absent
+
+- name: crate /etc/resolv.conf
+  copy:
+    src: etc/resolv.conf
+    dest: /etc/resolv.conf 
+    owner: root
+    group: root
+    mode: "0644"  
+

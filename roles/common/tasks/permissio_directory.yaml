@@ -1,0 +1,7 @@
+- name: permission directory
+  file:
+    path: "{{ item.path }}"
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: "{{ item.mode }}"
+  with_items: "{{ permission_directory }}"    

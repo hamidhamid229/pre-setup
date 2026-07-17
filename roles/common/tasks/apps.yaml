@@ -1,0 +1,5 @@
+- name: Install Package 
+  apt:
+    name: "{{ item.name }}"
+    state: present
+  with_items: "{{ apps }}"   
