@@ -1,4 +1,0 @@
-all:
-  hosts:
-    pc1:
-      ansible_port: 443  

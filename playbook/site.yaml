@@ -1,6 +1,5 @@
 - name: use task common
-  hosts: pc1
-  vars_files: /root/ansible/group_vars/all.yaml  
+  hosts: all
   roles:
     - common
       
